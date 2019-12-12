@@ -1,11 +1,23 @@
 <div class="radioButtons">
-    <div class="left">
-        <input type="radio" value="name" checked="checked" >
-            &nbsp;&nbsp;Sort by name
-    </div>
-    <div class="right">
-        <input type="radio" value="age" id="age">&nbsp;&nbsp;Sort by age
-    </div>
+  <div class="left">
+    <input
+      type="radio"
+      [(ngModel)]="model.sortBy"
+      (click)="returnModelState($event)"
+      value="name"
+      checked="checked"
+    />
+    &nbsp;&nbsp;Sort by name
+  </div>
+  <div class="right">
+    <input
+      type="radio"
+      (click)="returnModelState($event)"
+      [(ngModel)]="model.sortBy"
+      value="age"
+      id="age"
+    />&nbsp;&nbsp;Sort by age
+  </div>
 </div>
 
 <!-- Fill the HTML with respective directives -->

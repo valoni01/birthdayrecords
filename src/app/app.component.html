@@ -1,2 +1,2 @@
-<app-radio></app-radio>
-<app-table></app-table>
+<app-radio (sortvalue)="getSortedValue($event)"></app-radio>
+<app-table [sortBy]="sortvalue"></app-table>
